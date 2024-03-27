@@ -117,7 +117,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
-          <a href="#">
+          <a href="<?= site_url('/')?>">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
