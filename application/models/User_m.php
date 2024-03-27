@@ -10,4 +10,14 @@ class User_m extends CI_Model {
         $this->db->where('password', sha1($post['password']));
         return $this->db->get();
     }
+
+    public function get($id = null){
+        $this->db->select('*');
+        $this->db->from('user');
+        if($id != null){
+            $this->db->where('user_id', $id);
+        }
+        $query = $this->db->get();
+        return $query;
+    }
 }

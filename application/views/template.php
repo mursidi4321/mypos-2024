@@ -56,7 +56,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?= base_url('_assets') ?>/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><?php echo ucfirst($this->fungsi->user_login()->username) ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -64,8 +64,8 @@
                 <img src="<?= base_url('_assets') ?>/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                <?php echo ucfirst($this->fungsi->user_login()->name) ?>
+                  <small><?php echo ucfirst($this->fungsi->user_login()->address) ?></small>
                 </p>
               </li>
          
@@ -76,7 +76,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?= site_url('auth/logout')?>" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?= site_url('auth/logout')?>" class="btn btn-danger btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -98,7 +98,7 @@
           <img src="<?= base_url('_assets') ?>/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p><?php echo ucfirst($this->fungsi->user_login()->name) ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
