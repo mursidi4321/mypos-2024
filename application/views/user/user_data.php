@@ -37,7 +37,7 @@
                             <td><?php echo $data->username ?></td>
                             <td><?php echo $data->name ?></td>
                             <td><?php echo $data->address ?></td>
-                            <td><?php echo $data->level ?></td>
+                            <td><?php echo $data->level == '1' ? 'Admin' : 'Kasir' ?></td>
                             <td class="text-center" width="160px">
                             <a href="<?= site_url('user/add/')?>" class="btn btn-flat btn-xs btn-primary"><i class="fa fa-pencil"></i> Update</a>
                             <a href="<?= site_url('user/del/')?>" class="btn btn-flat btn-xs btn-danger"><i class="fa fa-trash"></i> Delete</a>
