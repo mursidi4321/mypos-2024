@@ -15,7 +15,7 @@
             <div class="box-header">
                 <h3 class="box-title">Add user</h3>
                 <div class="pull-right">
-                    <a href="<?= site_url('user')?>" class="btn btn-flat btn-warning"><i class="fa fa-undo"></i> Create</a>
+                    <a href="<?= site_url('user')?>" class="btn btn-flat btn-warning"><i class="fa fa-undo"></i> Back</a>
                 </div>
             </div>
             <div class="box-body">

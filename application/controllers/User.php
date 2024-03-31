@@ -42,4 +42,16 @@ class User extends CI_Controller {
 			}
 		}
     }
+
+	public function delete(){
+		$id = $this->input->post('user_id');
+		$this->user_m->delete($id);
+		if($this->db->affected_rows() > 0){
+			echo "<script>alert('Hapus data users berhasil')</script>";
+			echo "<script>window.location='".site_url('user')."'</script>";
+		} else {
+			echo "<script>window.location='".site_url('user')."'</script>";
+		}
+		
+	}
 }

@@ -29,4 +29,9 @@ class User_m extends CI_Model {
         $params['level'] = $post['level'];
         $this->db->insert('user', $params);
     }
+
+    public function delete($id){
+        $this->db->where('user_id', $id);
+        $this->db->delete('user');
+    }
 }

@@ -39,8 +39,11 @@
                             <td><?php echo $data->address ?></td>
                             <td><?php echo $data->level == '1' ? 'Admin' : 'Kasir' ?></td>
                             <td class="text-center" width="160px">
-                            <a href="<?= site_url('user/add/')?>" class="btn btn-flat btn-xs btn-primary"><i class="fa fa-pencil"></i> Update</a>
-                            <a href="<?= site_url('user/del/')?>" class="btn btn-flat btn-xs btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                            <form action="<?= site_url('user/delete')?>" method="post">
+                                <a href="<?= site_url('user/edit/').$data->user_id?>" class="btn btn-flat btn-xs btn-primary"><i class="fa fa-pencil"></i> Update</a>
+                                <input type="hidden" name="user_id" value="<?= $data->user_id ?>">
+                                <button type="submit" onclick="return confirm('Yakin dihapus?')" class="btn btn-flat btn-xs btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                            </form>
                             </td>
                         </tr>
                         <?php endforeach ?>
